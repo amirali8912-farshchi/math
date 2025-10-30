@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first page</title>
+    <link rel="stylesheet" href="{% static 'reset.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="preconnect" href="//fdn.fontcdn.ir">
+    <link rel="preconnect" href="//v1.fontapi.ir">
+    <link href="https://v1.fontapi.ir/css/Shabnam" rel="stylesheet">
+</head>
+
+<body>
+    <main class="seasions">
+        <p class="p">مباحث :</p>
+        <div class="qwe">
+            <div class="asd">
+                {%for i in a%}
+                {%for a in id%}
+                <a href="{%url 'title' i.subjects  a %}">{{i.subjects}}</a>
+                {%endfor%}
+                {%endfor%}
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
+<!-- style="left: 13rem;top:8.25rem" -->

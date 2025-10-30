@@ -1,0 +1,91 @@
+.seasions {
+    text-align: end;
+    position: relative;
+    background-color: #90ff70;
+    height: 100vh;
+    width: 100vw;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    padding: 0.75rem;
+    font-size: x-large;
+    font-family: Shabnam;
+    color: white;
+    text-align: center;
+    background-color: rgb(167, 9, 167);
+    width: 10rem;
+    height: 2.1rem;
+    border-radius: 40px;
+    text-decoration: none;
+}
+
+
+.qwe {
+    position: absolute;
+    left: 13rem;
+    top: 8.25rem
+}
+
+
+.asd {
+    height: 25.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* .as {
+    position: absolute;
+    left: 2rem;
+    color: #90ff70;
+    top: 4rem;
+    text-align: center;
+    font-family: Shabnam;
+    font-size: xx-large;
+
+} */
+.checkbox-container input {
+    appearance: none;
+
+    -webkit-appearance: none;
+    /* برای سافاری */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    /* left: -2rem; */
+    color: #90ff70;
+    top: 0rem;
+    position: relative;
+}
+
+
+.checkbox-container input:checked {
+    background-color: #4caf50;
+    border-color: #4caf50;
+}
+
+.checkbox-container input:checked::after {
+    content: "✔";
+    color: white;
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    font-size: 16px;
+}
+
+.p {
+
+
+    position: absolute;
+    left: 2rem;
+
+    top: 4rem;
+    text-align: center;
+    font-family: Shabnam;
+    font-size: xx-large;
+}
