@@ -25,6 +25,12 @@ class question(models.Model):
     seasion = models.ForeignKey(seasions, on_delete=models.CASCADE ,related_name='desclr', default=1)
     subject = models.ForeignKey(titels , on_delete=models.CASCADE ,related_name='question')
     body = models.TextField()
+    choice1 = models.CharField(max_length=45 , default='2')
+    choice2 = models.CharField(max_length=45, default='3')
+    choice3 = models.CharField(max_length=45, default='4')
+    choice4 = models.CharField(max_length=45, default='5')
+    answer = models.IntegerField()
+    why=models.TextField()
     
 class dq(models.Model):
     seasion = models.ForeignKey(seasions, on_delete=models.CASCADE ,related_name='deslr', default=1)

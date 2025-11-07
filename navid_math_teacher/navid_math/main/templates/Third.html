@@ -26,10 +26,9 @@
                 {%for i in t%}
                 {%for y in a%}
                 <!-- <p>{{a}} , {{t}}</p> -->
-                <a href="{% url 'information' i a %}" style="left: 13rem;top:8.25rem;">توضیحات</a>
-                <a href="#" style="left: 13rem;top:11.5rem;">نمونه سوالات</a>
-                <a href="#" style="left: 13rem;top:14.75rem;">حل مسائل</a>
-                <a href="#" style="left: 13rem;top:18rem;">سوال روز</a>
+                <a href="{% url 'information' i a %}" >توضیحات</a>
+                <a href="{% url 'questions' i a %}" >نمونه سوالات</a>
+                <a href="{% url 'dq' i a %}" >سوال روز</a>
                 {%endfor%}
                 {%endfor%}
             </div>

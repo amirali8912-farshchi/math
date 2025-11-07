@@ -48,14 +48,33 @@ def information(request, t,a):
     o=int(a[2])
     s=seasions.objects.get(seasions=o)
     q=titels.objects.get(seasion=s , subjects=t)
-    # print(q)
-    b=question.objects.get(seasion=s ,subject=q)
+    print(q)
+    b=question.objects.filter(seasion=s ,subject=q)
     # print(b)
     return render(request,'description.html',{'b':b,'s':s,'t':t})
 def questions(request,t,s):
+    print(t,s)
+    s=int(s[2])
     # s=seasions.objects.get(seasions=o)
     q=titels.objects.get(seasion=s , subjects=t)
-    b=question.objects.get(seasion=s ,subject=q)
+    print(q)
+    b=question.objects.filter(seasion=s ,subject=q)
+    for i in b:
+        # for t in i:
+            # for k in t:
+        print('''
+              
+              
+              
+              
+              ''',i.choice1)
     return render(request,'six.html',{'b':b})
-
-
+def daq(request,t,s):
+    s=int(s[2])
+    # s=seasions.objects.get(seasions=o)
+    q=titels.objects.get(seasion=s , subjects=t)
+    print(q)
+    b=dq.objects.filter(seasion=s ,subject=q)
+    for i in b:
+        print(t)
+    return render(request,'six.html',{'b':b})

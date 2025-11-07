@@ -16,20 +16,26 @@
 
 <body>
     <main class="seasions">
-        <p class="p">متن سوال</p>
+        {%for i in b%}
+        <p class="pe">{{i.body}}</p>
         <img src="#" alt="">
-        <label for="test1" title="گزینه 1" class="p checkbox-container"  style="top: 15rem;left:3.5rem">گزینه 1
-            <input type="radio" title="test1" value="1" style="left: 0.0000rem" name="choice">
-        </label>
-        <label for="test2" title="گزینه 1" style="left: 13rem;top:15rem" class="p checkbox-container" >گزینه 1
-            <input type="radio" title="test2" name="choice" style="left: 0.0000rem" value="2">
-        </label>
-        <label for="test3" title="گزینه 1" class="p checkbox-container" style="top: 15rem;left:22.5rem">گزینه 1
-            <input type="radio" title="test3"  name="choice" style="left: 0.0000rem" value="3">
-        </label>
-        <label for="test4" title="گزینه 1" class="p checkbox-container" style="top: 15rem;left:32rem">گزینه 1
-            <input type="radio" title="test4" name="choice" style="left: 0.0000rem" value="4" >
-        </label>
+        <div class="test">
+
+            <label for="test1" title="{{i.choice1}}" class="pe checkbox-container">{{i.choice1}}
+                <input type="radio" title="test1" value="1" name="choice">
+            </label>
+            <label for="test2" title="{{i.choice2}}" class="pe checkbox-container">{{i.choice2}}
+                <input type="radio" title="test2" name="choice" value="2">
+            </label>
+            <label for="test3" title="{{i.choice3}}" class="pe checkbox-container">{{i.choice3}}
+                <input type="radio" title="test3" name="choice" value="3">
+            </label>
+            <label for="test4" title="{{i.choice4}}"" class="pe checkbox-container">{{i.choice4}}
+                <input type="radio" title="test4" name="choice" value="4">
+            </label>
+
+        </div>
+        {%endfor%}
     </main>
 
 </body>
